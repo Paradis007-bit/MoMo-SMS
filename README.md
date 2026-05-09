@@ -102,7 +102,7 @@ All team members update the board regularly, ensuring transparency and smooth co
 
 **Scrum Board Link:**
 
-[Trello scrum Board]([https://trello.com/b/your-board-id/project-board](https://trello.com/b/288w3gd7/my-trello-board))
+- 🚀 [Trello Scrum Board](https://trello.com/b/288w3gd7/my-trello-board)
 
 ---
 
@@ -111,3 +111,5 @@ All team members update the board regularly, ensuring transparency and smooth co
 **Architecture Diagram Link:**
 
 **Week 1 Miro Link:**
+
+- 🧩 [Miro Architecture Diagram](https://miro.com/app/board/uXjVHXe-Ltw=/)
