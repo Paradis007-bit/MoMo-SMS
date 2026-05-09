@@ -1,6 +1,6 @@
 # MoMo-SMS
 
-## Team EMPERIUM
+# Team EMPERIUM
 
 **Members:**
 1. Mukamugisha Pascaline
@@ -10,13 +10,13 @@
 
 ---
 
-## Project Description
+# Project Description
 
 MoMo-SMS is a full-stack web application built to make sense of Mobile Money transaction data. It processes raw SMS messages from an XML file, cleans the data, groups transactions by type, and saves everything into a database. Users can then explore their transaction history through a clean, easy-to-use dashboard.
 
 ---
 
-## Project Structure
+# Project Structure
 
 ```
 MoMo-SMS/
@@ -90,7 +90,7 @@ MoMo-SMS/
 
 ---
 
-## Scrum Board
+# Scrum Board
 
 Our team uses a Trello board to manage tasks and track progress following Agile practices. The board helps us see what needs to be done, what is currently in progress, and what has been completed. It is organized into the following columns:
 
@@ -106,7 +106,7 @@ All team members update the board regularly, ensuring transparency and smooth co
 
 ---
 
-## High-Level System Architecture
+# High-Level System Architecture
 
 **Architecture Diagram Link:**
 
