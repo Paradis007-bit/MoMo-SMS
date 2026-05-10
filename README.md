@@ -108,8 +108,8 @@ All team members update the board regularly, ensuring transparency and smooth co
 
 # High-Level System Architecture
 
-**Architecture Diagram Link:**
+**Week 1 :**
 
-**Week 1 Miro Link:**
+**Draw.io Architecture Diagram link:**
+https://viewer.diagrams.net/?tags=%7B%7D&lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&dark=0#G1K5mjgxxOaDQ69c7VAwRNcYyzFGd9lRhZ
 
--  [Miro Architecture Diagram](https://miro.com/app/board/uXjVHXe-Ltw=/)
