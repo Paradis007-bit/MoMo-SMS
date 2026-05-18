@@ -79,8 +79,10 @@ Architecture Diagram: https://viewer.diagrams.net/?tags=%7B%7D&lightbox=1&highli
  
  ERD Diagram Documentation: https://docs.google.com/document/d/1Q-lzg5gMEvYKbviP5TsyF_tCnm3lq1TU7N9RLxu3f84/edit?tab=t.0
 
- Team participation sheet:
- AI Usage Log :
+ Team participation sheet:https://docs.google.com/spreadsheets/d/18SF9_6LiET8kBZfOTMjSEpkRdOBkGPfFovO1uNzPnkc/edit?gid=0#gid=0
+
+ AI Usage Log :https://docs.google.com/document/d/13U4urqrUEmW-NJncBF4hoYAc7gyG07H-VRbQSQvC3eQ/edit?usp=sharing
+
 ---
 ## Database Design
 
@@ -148,34 +150,8 @@ The `examples/json_schemas.json` file shows how each database table maps to a JS
 
 The `complex_transaction_example` shows a full API response — one transaction with the sender, receiver, category, and log all nested inside it.
 
----
 
-## How to Run
 
-**Database setup**
-```bash
-mysql -u root -p < database/database_setup/init.sql
-```
-
-**ETL Pipeline**
-```bash
-pip install -r requirements.txt
-python backend/etl/run.py --xml backend/data/raw/momo.xml
-```
-
-**Backend API**
-```bash
-cd backend
-npm install
-npm run dev
-```
-
-**Frontend**
-```bash
-python -m http.server 8080 --directory frontend
-```
-
----
 ## Tech Stack
 
 | Layer | Technology |
