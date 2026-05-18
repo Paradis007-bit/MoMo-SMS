@@ -1,27 +1,14 @@
 Team EMPERIUM
 ### Members:
 
-Mukamugisha Pascaline
-Monique Niyobyose
-Anas Khalid Nasir
-Hirwa Paradis Cesar
+1. Mukamugisha Pascaline
+2. Monique Niyobyose
+3. Anas Khalid Nasir
+4. Hirwa Paradis Cesar
 
 # MoMo-SMS
 
 MoMo-SMS is a full-stack web application built to make sense of Mobile Money transaction data. It processes raw SMS messages from an XML file, cleans the data, groups transactions by type, and saves everything into a database. Users can then explore their transaction history through a clean, easy-to-use dashboard.
-
-
-## Links
-
-Architecture Diagram: https://viewer.diagrams.net/?tags=%7B%7D&lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&dark=0#G1K5mjgxxOaDQ69c7VAwRNcYyzFGd9lRhZ
-
- Scrum Board :https://trello.com/b/288w3gd7/my-trello-board
- 
- ERD Diagram Documentation: https://docs.google.com/document/d/1Q-lzg5gMEvYKbviP5TsyF_tCnm3lq1TU7N9RLxu3f84/edit?tab=t.0
-
- Team participation sheet:
- AI Usage Log :
----
 
 ## Project Structure
 
@@ -84,6 +71,17 @@ MoMo-SMS/
 
 ---
 
+## Links
+
+Architecture Diagram: https://viewer.diagrams.net/?tags=%7B%7D&lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&dark=0#G1K5mjgxxOaDQ69c7VAwRNcYyzFGd9lRhZ
+
+ Scrum Board :https://trello.com/b/288w3gd7/my-trello-board
+ 
+ ERD Diagram Documentation: https://docs.google.com/document/d/1Q-lzg5gMEvYKbviP5TsyF_tCnm3lq1TU7N9RLxu3f84/edit?tab=t.0
+
+ Team participation sheet:
+ AI Usage Log :
+---
 ## Database Design
 
 We have six tables. Here is what each one does and how they connect:
