@@ -81,7 +81,9 @@ Architecture Diagram: https://viewer.diagrams.net/?tags=%7B%7D&lightbox=1&highli
 
  Team participation sheet:https://docs.google.com/spreadsheets/d/18SF9_6LiET8kBZfOTMjSEpkRdOBkGPfFovO1uNzPnkc/edit?gid=0#gid=0
 
- AI Usage Log :https://docs.google.com/document/d/13U4urqrUEmW-NJncBF4hoYAc7gyG07H-VRbQSQvC3eQ/edit?usp=sharing
+ AI Usage Log :https://copilot.microsoft.com/chats/re6AQmfNdcpCvYA2EvqDt
+
+ We used AI assistance to check grammar in our README documentation and to verify SQL syntax for errors before running our scripts.
 
 ---
 ## Database Design
