@@ -9,3 +9,4 @@ SOURCE database_setup/transaction_category.sql;
 SOURCE database_setup/transactions.sql;
 SOURCE database_setup/transaction_participants.sql;
 SOURCE database_setup/system_logs.sql;
+SOURCE database_setup/indexes.sql;
