@@ -115,8 +115,6 @@ We have six tables. Here is what each one does and how they connect:
 
 ## ERD Diagram
 The ERD diagram added as a folder on the repository 
----
-
 ## Some of the Database Screenshots
 
 ### 1. Database Created
