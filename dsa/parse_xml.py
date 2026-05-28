@@ -41,10 +41,10 @@ def parse_sms(xml_file):
         category = get_category(body)
         amount = parse_amount(body)
 
-        balance_match = re.search(r'(?:new balance[:\s]*|NEW BALANCE\s*:)\s*([\d,]+)\s*RWF', body, re.IGNORECASE)
+        balance_match = re.search(r'(?:new balance[:\s]|NEW BALANCE\s:)\s*([\d,]+)\s*RWF', body, re.IGNORECASE)
         balance = int(balance_match.group(1).replace(',', '')) if balance_match else 0
 
-        txid_match = re.search(r'(?:TxId[:\s]*|Financial Transaction Id[:\s]*)([\d]+)', body)
+        txid_match = re.search(r'(?:TxId[:\s]|Financial Transaction Id[:\s])([\d]+)', body)
         transaction_id = txid_match.group(1) if txid_match else str(tx_id)
 
         record = {
@@ -62,6 +62,7 @@ def parse_sms(xml_file):
         tx_id += 1
 
     return transactions
+
 
 
 if __name__ == "__main__":
