@@ -17,6 +17,8 @@ USERS = {
     "admin": "password123"
 }
 
+# check for Basic Auth header and validate credentials
+
 
 def check_auth(headers):
     auth = headers.get("Authorization", "")
@@ -28,6 +30,8 @@ def check_auth(headers):
         return USERS.get(username) == password
     except Exception:
         return False
+
+# send JSON response with appropriate headers
 
 
 def send_json(handler, status, data):
@@ -44,6 +48,7 @@ class APIHandler(BaseHTTPRequestHandler):
     def log_message(self, format, *args):
         print(f"[{self.address_string()}] {format % args}")
 
+    # get all transactions or filter by category, or get transaction by ID
     def do_GET(self):
         if not check_auth(self.headers):
             send_json(
@@ -78,6 +83,7 @@ class APIHandler(BaseHTTPRequestHandler):
         else:
             send_json(self, 404, {"Error": "Endpoint not found."})
 
+    # make post request to create new transaction, with JSON body containing category and amount (optional)
     def do_POST(self):
         if not check_auth(self.headers):
             send_json(
