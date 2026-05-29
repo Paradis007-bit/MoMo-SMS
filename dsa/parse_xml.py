@@ -1,3 +1,4 @@
+import os
 import xml.etree.ElementTree as ET
 import re
 import json
@@ -41,10 +42,10 @@ def parse_sms(xml_file):
         category = get_category(body)
         amount = parse_amount(body)
 
-        balance_match = re.search(r'(?:new balance[:\s]|NEW BALANCE\s:)\s*([\d,]+)\s*RWF', body, re.IGNORECASE)
+        balance_match = re.search(r'(?:new balance[:\s]*|NEW BALANCE\s*:)\s*([\d,]+)\s*RWF', body, re.IGNORECASE)
         balance = int(balance_match.group(1).replace(',', '')) if balance_match else 0
 
-        txid_match = re.search(r'(?:TxId[:\s]|Financial Transaction Id[:\s])([\d]+)', body)
+        txid_match = re.search(r'(?:TxId[:\s]*|Financial Transaction Id[:\s]*)([\d]+)', body)
         transaction_id = txid_match.group(1) if txid_match else str(tx_id)
 
         record = {
@@ -64,7 +65,8 @@ def parse_sms(xml_file):
     return transactions
 
 
-
 if __name__ == "__main__":
-    data = parse_sms("../backend/data/raw/modified_sms_v2.xml")
+    xml_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "backend", "data", "raw", "modified_sms_v2.xml")
+    data = parse_sms(xml_file)
+    print(f"Total messages parsed: {len(data)}")
     print(json.dumps(data[:3], indent=2))

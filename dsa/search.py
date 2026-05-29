@@ -1,3 +1,4 @@
+import os
 import time
 from parse_xml import parse_sms
 
@@ -51,5 +52,6 @@ def compare_search(xml_file, targets):
 
 
 if __name__ == "__main__":
+    xml_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "backend", "data", "raw", "modified_sms_v2.xml")
     targets = ["73214484437", "45434420466", "99999999999"]
-    compare_search("../backend/data/raw/modified_sms_v2.xml", targets)
+    compare_search(xml_file, targets)
