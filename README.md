@@ -161,3 +161,94 @@ The `complex_transaction_example` shows a full API response — one transaction 
 | ETL | Python, ElementTree |
 | Database | MySQL |
 | Testing | pytest |
+
+
+
+## Week 3 — REST API and Data Processing
+
+### Overview
+
+We parsed 1691 MTN Mobile Money SMS messages from an XML backup file and built a REST API to access the data. We also compared two search algorithms to show the difference in performance.
+
+---
+
+### How to run
+
+Start the server from the project root:
+
+```bash
+
+python api/server.py
+
+```
+
+The server runs on port 8000. Open a second terminal to test with curl.
+
+Credentials: username `admin`, password `password123`
+
+---
+
+### API Endpoints
+
+| Method | URL | What it does |
+
+|--------|-----|--------------|
+
+| GET | /transactions | Returns all transactions |
+
+| GET | /transactions?category=incoming | Filter by category |
+
+| GET | /transactions/{id} | Returns one transaction |
+
+| POST | /transactions | Creates a new transaction |
+
+| PUT | /transactions/{id} | Updates a transaction |
+
+| DELETE | /transactions/{id} | Deletes a transaction |
+
+All endpoints require Basic Auth. Wrong or missing credentials return 401.
+
+Full documentation is in `docs/api_docs.md`.
+
+---
+
+### XML Parsing
+
+`dsa/parse_xml.py` reads the XML file and converts each SMS into a JSON object with these fields: id, transaction_id, date, timestamp, category, amount, balance, body.
+
+```bash
+
+python dsa/parse_xml.py
+
+```
+
+---
+
+### DSA — Search Algorithm Comparison
+
+`dsa/search.py` searches the same transaction ID using two methods and prints how long each one takes.
+
+- Linear search — checks every record one by one. O(n)
+
+- Dictionary lookup — uses a hash map for instant access. O(1)
+
+```bash
+
+python dsa/search.py
+
+```
+
+---
+
+### Running all curl tests
+
+Make sure the server is running first, then:
+
+```bash
+
+bash screenshots/test_commands.sh
+
+```
+
+---
+

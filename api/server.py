@@ -1,3 +1,6 @@
+import sys
+import os
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'dsa'))
 from parse_xml import parse_sms
 import json
 import base64
@@ -48,7 +51,7 @@ class APIHandler(BaseHTTPRequestHandler):
     def log_message(self, format, *args):
         print(f"[{self.address_string()}] {format % args}")
 
-    # get all transactions or filter by category, or get transaction by ID
+
     def do_GET(self):
         if not check_auth(self.headers):
             send_json(
@@ -83,7 +86,7 @@ class APIHandler(BaseHTTPRequestHandler):
         else:
             send_json(self, 404, {"Error": "Endpoint not found."})
 
-    # make post request to create new transaction, with JSON body containing category and amount (optional)
+    
     def do_POST(self):
         if not check_auth(self.headers):
             send_json(
